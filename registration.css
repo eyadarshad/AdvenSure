@@ -1,0 +1,193 @@
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.popup-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+.popup-box h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5em;
+}
+.popup-box p {
+    margin: 10px 0;
+    color: #555;
+}
+.popup-box button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+.popup-box button:hover {
+    background: #0056b3;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('https://cdn.segmentnextimages.com/wp-content/uploads/2022/09/Elden-Ring-Iji.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px); 
+}
+
+.left {
+    width: 40%;
+    background: rgba(56, 163, 165, 0.5);
+    color: white;
+    text-align: center;
+    padding: 60px;
+    height: 70%;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.left h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.left p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.left .btn {
+    padding: 12px 30px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.left .btn:hover {
+    background: white;
+    color: #38a3a5;
+}
+
+/* Right section styling */
+.right {
+    width: 60%;
+    height: 70%;
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+    text-align: center;
+    padding: 60px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.right h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #38a3a5;
+}
+
+.right p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #7a7a7a;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background: #e9ecef;
+    color: #38a3a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon:hover {
+    background: #38a3a5;
+    color: white;
+}
+form input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #7a7a7a;
+}
+form input:focus {
+    outline: none;
+    border-color: #38a3a5;
+    box-shadow: 0 0 5px rgba(56, 163, 165, 0.5);
+}
+.error-message {
+    color: #e74c3c; 
+    background-color: #f8d7da;  
+    border: 1px solid #f5c6cb;  
+    padding: 10px;
+    margin-bottom: 15px;  
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+.signup-btn {
+    width: 80%;
+    padding: 12px;
+    background: #38a3a5;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.signup-btn:hover {
+    background: #1d3557;
+}
+.link{
+    color:white;
+    text-decoration: solid;
+}
+.link:hover{
+    color:#38a3a5;
+}

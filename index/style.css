@@ -1,0 +1,390 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Banner Section */
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #73b1b1), url('Neelum Valley.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    position: relative;
+}
+
+.logo {
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+/* Reset some defaults for better control */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full height for body and background element */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Slideshow container */
+.background-slideshow {
+    margin: 50px;
+    padding: 80px;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    background-size: cover; /* Ensures images cover the container */
+    background-position: center; /* Centers images */
+    animation: slide 20s infinite; /* Animation runs for 20 seconds with infinite loop */
+}
+
+/* Keyframes to transition background images */
+@keyframes slide {
+    0% {
+        background-image: url('untitled_design.jpg__1000x800_q90_subsampling-2\ \(1\).jpg');
+    }
+    33% {
+        background-image: url('Norway-shutterstock_1504345343.jpg');
+    }
+    66% {
+        background-image: url(Ratti_Gali_Lake.jpg);
+    }
+    100% {
+        background-image: url('web.webp');
+    }
+}
+
+/* Content Styling */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-size: 130px;
+    font-family: 'Kaushan Script', serif;
+}
+
+.content p {
+    color: #faf2f2;
+    font-size: 30px;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+/* Text Styling */
+.banner-text {
+    text-align: center;
+    color: #f7f1f1;
+    padding-top: 180px;
+}
+
+.banner-text h1 {
+    font-size: 130px;
+    font-family: 'Kaushan Script', serif;
+}
+
+.banner-text p {
+    color: #faf2f2;
+    font-size: 30px;
+    font-style: italic;
+}
+
+/* Button Styling */
+.banner-btn {
+    margin: 70px auto 0;
+}
+
+.banner-btn a {
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    border: .5px solid #0f0f0f;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+
+.banner-btn a span {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: -1;
+    transition: width 0.5s;
+}
+
+.banner-btn a:hover span {
+    width: 100%;
+}
+
+.banner-btn a:hover {
+    color: #ffffff;
+}
+
+
+/* Side Navigation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#sideNav {
+    width: 100%; /* Full width */
+    height: 60px; /* Height of the navigation bar */
+    position: fixed;
+    top: 0; /* Aligns the navigation at the top */
+    
+    z-index: 2;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 20px;
+}
+
+nav ul li a:hover {
+    background-color: #00796b;
+}
+
+.content {
+    padding: 80px 20px; /* Adds padding so content doesn't overlap with fixed nav */
+}
+
+/* Features Section */
+#features {
+    width: 100%;
+    padding: 70px 0px;
+}
+
+.title-text {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.title-text p {
+    font-size: 40px;
+    color: #009688;
+    font-weight: bold;
+}
+
+.title-text h1 {
+    font-size: 50px;
+}
+
+.features-box {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.features {
+    flex-basis: 48%;
+}
+
+.features h1 {
+    font-size: 24px;
+    color: #009688;
+    margin-bottom: 20px;
+}
+
+.features-desc {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.features-icon i {
+    font-size: 24px;
+    color: #009688;
+}
+
+.features-text p {
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.features-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Services Section */
+#service {
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+
+.service-box {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.single-service {
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.single-service img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+/* Overlay Styling */
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 7px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.single-service:hover .overlay {
+    opacity: 1;
+}
+
+/* Service Description */
+.service-desc {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    color: #fff;
+    transition: opacity 1s, bottom 1s;
+}
+
+.service-desc p {
+    font-size: 14px;
+}
+
+.single-service:hover .service-desc {
+    bottom: 40%;
+    opacity: 1;
+}
+#testimonials{
+    width: 100%;
+    padding: 70px 0;
+}
+.testimonials-row{
+    width: 80;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.testimonials-col{
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius:5px;
+    box-shadow: 0 10px 20px 3px #009688;
+    cursor: pointer;
+    transition: transform .5s;
+}
+.testimonials-col p{
+    font-size:14px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.user img{
+    width:40px;
+margin-right:20px ;
+border-radius: 3px;
+
+
+}
+.user-info .fa{
+    margin-left: 10px;
+    columns: #009680; 
+    font-size: 20px;
+}
+.user-info small{
+    color: #0f0f0f;
+}
+.testimonials-col:hover{
+    transform: translateY(7px);
+}
+#footer{
+    padding: 100px 0 20px;
+    background: #efefef;
+}
+.footer-row{
+    width: 80%;
+    margin: 0 auto ;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-left,.footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.footer-right{
+    text-align: right;
+}
+.footer-row h1{
+    margin: 10px 0;
+}
+footer-row p{
+    margin: 0 10px;
+}
