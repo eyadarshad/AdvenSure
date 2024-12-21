@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar Container */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Logo Styling */
+        .navbar-logo img {
+            height: 40px;
+        }
+
+        /* Nav Links */
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Buttons */
+        .navbar-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .navbar-buttons .register {
+            background-color: #ffc107;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .navbar-buttons .signin {
+            background-color: #e0e0e0;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Mobile Styling */
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                width: 200px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+                cursor: pointer;
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#trading">Trading</a>
+            <a href="#markets">Markets</a>
+            <a href="#platforms">Platforms</a>
+            <a href="#tools">Tools</a>
+            <a href="#company">Company</a>
+            <a href="#partners">Partners</a>
+        </div>
+        <div class="navbar-buttons">
+            <button class="register">Register</button>
+            <button class="signin">Sign in</button>
+        </div>
+        <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

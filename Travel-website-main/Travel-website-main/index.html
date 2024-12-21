@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Website By Shahzaib Pervez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="#" class="logo"></a>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#destinations">Feautures</a>
+                    <a href="#packages">Destinations</a>
+                    <a href="#about">Testimonials </a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="auth-buttons">
+                    <button class="auth-btn login-btn" onclick="openModal('login-modal')">Login</button>
+                    <button class="auth-btn signup-btn" onclick="openModal('signup-modal')">Sign Up</button>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Slider Section -->
+        <div class="slider-container">
+            <div class="title-container">
+                <h1 class="main-title">Travel Guide </h1>
+                <p class="subtitle"></p>"The world is a book, and those who do not travel read only one page."
+            </div>
+            
+            <ul class="slides">
+                <li class="slide active" data-index="1">
+                    <div class="slotholder">
+                        <div class="tp-dottedoverlay"></div>
+                        <div class="tp-bgimg" style="background-image: url('Norway-shutterstock_1504345343.jpg')"></div>
+                    </div>
+                </li>
+                <li class="slide" data-index="2">
+                    <div class="slotholder">
+                        <div class="tp-dottedoverlay"></div>
+                        <div class="tp-bgimg" style="background-image: url('Faisal-Mosque.jpg')"></div>
+                    </div>
+                </li>
+                <li class="slide" data-index="3">
+                    <div class="slotholder">
+                        <div class="tp-dottedoverlay"></div>
+                        <div class="tp-bgimg" style="background-image: url('Title-Neelum-Valley-Azad-Kashmir-1-960x636.jpg')"></div>
+                    </div>
+                </li>
+                <li class="slide" data-index="4">
+                    <div class="slotholder">
+                        <div class="tp-dottedoverlay"></div>
+                        <div class="tp-bgimg" style="background-image: url('Ganga Choti.webp')"></div>
+                    </div>
+                </li>
+                <li class="slide" data-index="5">
+                    <div class="slotholder">
+                        <div class="tp-dottedoverlay"></div>
+                        <div class="tp-bgimg" style="background-image: url('1.png')"></div>
+                    </div>
+                </li>
+            </ul>
+    
+            <div class="navigation">
+                <button class="nav-btn prev">❮</button>
+                <button class="nav-btn next">❯</button>
+            </div>
+    
+            <div class="bullets">
+                <div class="bullet active"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+                <div class="bullet"></div>
+            </div>
+        </div>
+    
+        <!-- Login Modal -->
+        <div id="login-modal" class="auth-modal">
+            <div class="auth-form">
+                <button class="close-btn" onclick="closeModal('login-modal')">&times;</button>
+                <h2>Welcome Back</h2>
+                <form onsubmit="return false;">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" required placeholder="Enter your password">
+                    </div>
+                    <button class="submit-btn">Login</button>
+                    <div class="auth-links">
+                        <a href="#">Forgot Password?</a>
+                        <br>
+                        <a href="#" onclick="switchModal('login-modal', 'signup-modal')">Don't have an account? Sign Up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Signup Modal -->
+        <div id="signup-modal" class="auth-modal">
+            <div class="auth-form">
+                <button class="close-btn" onclick="closeModal('signup-modal')">&times;</button>
+                <h2>Create Account</h2>
+                <form onsubmit="return false;">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" required placeholder="Create a password">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" required placeholder="Confirm your password">
+                    </div>
+                    <button class="submit-btn">Sign Up</button>
+                    <div class="auth-links">
+                        <a href="#" onclick="switchModal('signup-modal', 'login-modal')">Already have an account? Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <section class="features" id="features">
+            <div class="title-text">
+                <p>FEATURES</p>
+                <h1>Why Choose Us</h1>
+            </div>
+            
+            <div class="features-layer">
+                <!-- Feature 1 -->
+                <div class="feature-item">
+                    <div class="feature-img">
+                        <img src="Faisal-Mosque.jpg" alt="Beautiful Locations">
+                        <div class="overlay">
+                            <span>Explore Now</span>
+                        </div>
+                    </div>
+                    <div class="feature-text">
+                        <h2>Beautiful Locations</h2>
+                        <p>Explore breathtaking landscapes, from serene valleys to majestic mountain peaks, where nature reveals its most captivating beauty. Discover hidden gems and iconic destinations that offer awe-inspiring views and unforgettable moments.</p>
+                    </div>
+                </div>
+    
+                <!-- Feature 2 -->
+                <div class="feature-item">
+                    <div class="feature-img">
+                        <img src="heel.webp" alt="Expert Guides">
+                        <div class="overlay">
+                            <span>Enjoy The Moment</span>
+                        </div>
+                    </div>
+                    <div class="feature-text">
+                        <h2>Luxury Environment</h2>
+                        <p>Travel with confidence alongside our experienced local guides who bring deep knowledge and passion to every journey. Their expertise ensures you get authentic insights, safe adventures, and access to hidden treasures off the beaten path.</p>
+                    </div>
+                </div>
+    
+                <!-- Feature 3 -->
+                <div class="feature-item">
+                    <div class="feature-img">
+                        <img src="tour-10-550x590.jpg" alt="Customized Experience">
+                        <div class="overlay">
+                            <span>Plan Your Trip</span>
+                        </div>
+                    </div>
+                    <div class="feature-text">
+                        <h2>Customized Experience</h2>
+                        <p>Your journey, your way. We tailor each trip to match your preferences and travel style, creating personalized itineraries that perfectly balance adventure, comfort, and cultural immersion for an unforgettable experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <script src="script.js"></script>
+
+        
+
+    
+        <section class="tour-section">
+            <div class="title-text">
+                <p>DESTINATIONS</p>
+                <h1>Our Tour Destinations</h1>
+            </div>
+            
+            <div class="tour-container">
+                <div class="tour-grid">
+                    <!-- Hunza Valley -->
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="L_Naran Kaghan,saif ul malok,babu sar.jpg" alt="Hunza Valley">
+                            <div class="price-badge">PKR 45,000</div>
+                        </div>
+                        <div class="tour-info">
+                            <h2>Hunza Valley</h2>
+                            <p>Experience the majestic beauty of Pakistan's northern paradise with stunning mountain views and ancient forts.</p>
+                            <div class="tour-features">
+                                <span>🗓️ 5 Days</span>
+                                <span>👥 Max 12</span>
+                                <span>⭐ 4.9/5</span>
+                            </div>
+                            <button class="book-now">Book Now</button>
+                        </div>
+                    </div>
+        
+                    <!-- Skardu -->
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="Springtime-view-of-mountain-peaks-in-the-Hunza-Valley-Pakistan.webp" alt="Skardu">
+                            <div class="price-badge">PKR 55,000</div>
+                        </div>
+                        <div class="tour-info">
+                            <h2>Skardu Valley</h2>
+                            <p>Visit the heart of Baltistan featuring Deosai Plains, Shangrila Lake, and mighty Karakoram peaks.</p>
+                            <div class="tour-features">
+                                <span>🗓️ 6 Days</span>
+                                <span>👥 Max 10</span>
+                                <span>⭐ 4.8/5</span>
+                            </div>
+                            <button class="book-now">Book Now</button>
+                        </div>
+                    </div>
+        
+                    <!-- Naran Kaghan -->
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="minimarg.jpg" alt="Naran Kaghan">
+                            <div class="price-badge">PKR 35,000</div>
+                        </div>
+                        <div class="tour-info">
+                            <h2>Naran Kaghan</h2>
+                            <p>Discover the enchanting valleys of Naran, Lake Saiful Muluk, and the scenic Babusar Pass.</p>
+                            <div class="tour-features">
+                                <span>🗓️ 4 Days</span>
+                                <span>👥 Max 15</span>
+                                <span>⭐ 4.7/5</span>
+                            </div>
+                            <button class="book-now">Book Now</button>
+                        </div>
+                    </div>
+        
+                    <!-- Swat Valley -->
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="b2.png" alt="Swat Valley">
+                            <div class="price-badge">PKR 30,000</div>
+                        </div>
+                        <div class="tour-info">
+                            <h2>Swat Valley</h2>
+                            <p>Explore the 'Switzerland of Pakistan' with its lush valleys, crystal clear rivers, and historic sites.</p>
+                            <div class="tour-features">
+                                <span>🗓️ 4 Days</span>
+                                <span>👥 Max 15</span>
+                                <span>⭐ 4.6/5</span>
+                            </div>
+                            <button class="book-now">Book Now</button>
+                        </div>
+                    </div>
+        
+                    <!-- Chitral & Kalash -->
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="Ganga Choti.webp" alt="Chitral">
+                            <div class="price-badge">PKR 50,000</div>
+                        </div>
+                        <div class="tour-info">
+                            <h2>Chitral & Kalash</h2>
+                            <p>Experience unique Kalash culture, visit Tirich Mir viewpoint, and explore historic Chitral Fort.</p>
+                            <div class="tour-features">
+                                <span>🗓️ 7 Days</span>
+                                <span>👥 Max 10</span>
+                                <span>⭐ 4.8/5</span>
+                            </div>
+                            <button class="book-now">Book Now</button>
+                        </div>
+                    </div>
+        
+                    <!-- Fairy Meadows -->
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="Tourist-Activities-by-Season-in-Naran-Kaghan.webp" alt="Fairy Meadows">
+                            <div class="price-badge">PKR 40,000</div>
+                        </div>
+                        <div class="tour-info">
+                            <h2>Fairy Meadows</h2>
+                            <p>Camp under the stars with stunning views of Nanga Parbat, the Killer Mountain.</p>
+                            <div class="tour-features">
+                                <span>🗓️ 4 Days</span>
+                                <span>👥 Max 8</span>
+                                <span>⭐ 4.9/5</span>
+                            </div>
+                            <button class="book-now">Book Now</button>
+                        </div>
+                    </div>
+        
+                    <!-- Neelum Valley -->
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="Neelum-Ratti-Gali-5-Days-Tour.jpg" alt="Neelum Valley">
+                            <div class="price-badge">PKR 38,000</div>
+                        </div>
+                        <div class="tour-info">
+                            <h2>Neelum Valley</h2>
+                            <p>Visit the paradise of Kashmir featuring Sharda, Kel, Arang Kel, and pristine lakes.</p>
+                            <div class="tour-features">
+                                <span>🗓️ 5 Days</span>
+                                <span>👥 Max 12</span>
+                                <span>⭐ 4.7/5</span>
+                            </div>
+                            <button class="book-now">Book Now</button>
+                        </div>
+                    </div>
+        
+                    <!-- Deosai Plains -->
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="Deosai.jpg" alt="Deosai Plains">
+                            <div class="price-badge">PKR 48,000</div>
+                        </div>
+                        <div class="tour-info">
+                            <h2>Deosai Plains</h2>
+                            <p>Experience the world's second-highest plateau with unique wildlife and endless wildflower fields.</p>
+                            <div class="tour-features">
+                                <span>🗓️ 6 Days</span>
+                                <span>👥 Max 10</span>
+                                <span>⭐ 4.8/5</span>
+                            </div>
+                            <button class="book-now">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <section id="testimonials" class="testimonials">
+        <div class="title-text">
+            <p>TESTIMONIALS</p>
+            <h1>What Clients Say</h1>
+        </div>
+        
+        <section id="testimonial-slideshow">
+            <div class="slideshow-container">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                    <div class="slide-content">
+                        <div class="client-img">
+                            <img src="child.jpg" alt="John Doe">
+                            <div class="quote-icon">❝</div>
+                        </div>
+                        <div class="comment-text">
+                            <h3>John Doe</h3>
+                            <p>Like a welcome gift at the hotel and a local guide who shared fascinating stories about each destination. I'm already planning my next trip with them!</p>
+                            <div class="rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="client-img">
+                            <img src="child.jpg" alt="Sarah Smith">
+                            <div class="quote-icon">❝</div>
+                        </div>
+                        <div class="comment-text">
+                            <h3>Sarah Smith</h3>
+                            <p>I had the most incredible experience with this tour agency! I highly recommend them to anyone looking for a stress-free and memorable adventure!</p>
+                            <div class="rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="client-img">
+                            <img src="OIP.jpg" alt="Elon Musk">
+                            <div class="quote-icon">❝</div>
+                        </div>
+                        <div class="comment-text">
+                            <h3>Jeff Bezos</h3>
+                            <p>I cannot say enough good things about this tour agency. From start to finish, the experience was flawless. The team's professionalism stood out, as did their passion for travel. Every moment was packed with adventure, yet I never felt rushed!</p>
+                            <div class="rating">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="slider-navigation">
+                <button class="prev" onclick="moveSlide(-1)">❮</button>
+                <div class="dots"></div>
+                <button class="next" onclick="moveSlide(1)">❯</button>
+            </div>
+        </section>
+    </section>
+
+    <script src="testimonials.js"></script>
+
+
+    
+    
+    <footer class="footer">
+        <div class="footer-waves"></div>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Experience Pakistan's breathtaking beauty with our expertly curated tours. We specialize in creating unforgettable adventures that showcase the country's diverse landscapes and rich culture.</p>
+                    <div class="social-links">
+                        <a href="#"><span>📘</span></a>
+                        <a href="#"><span>📷</span></a>
+                        <a href="#"><span>🐦</span></a>
+                        <a href="#"><span>📱</span></a>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><span>📍</span> 123 Tourism Street, Islamabad, Pakistan</li>
+                        <li><span>📞</span> +92 123 456 7890</li>
+                        <li><span>📧</span> info@pakistantours.com</li>
+                        <li><span>⏰</span> Mon - Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for travel updates, special offers, and more.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pakistan Tours. All rights reserved. | Designed with ❤️ for adventure seekers</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,36 +1,28 @@
 <?php
-// Start a session
 session_start();
 
-// Initialize an error message variable
+
 $error_message = "";
 
-// Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Database configuration
     $servername = "localhost";
     $username = "root";
-    $password = ""; // Default password for XAMPP MySQL
-    $dbname = "EyadArshad"; // Use the name of your database
+    $password = ""; 
+    $dbname = "EyadArshad";
 
-    // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Get user inputs
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Validate email format
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error_message = "Invalid email format.";
     } else {
-        // Check if the email already exists
         $checkQuery = "SELECT * FROM users WHERE email = ?";
         $stmt = $conn->prepare($checkQuery);
         $stmt->bind_param("s", $email);
@@ -38,13 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
-            // Email already exists
+         
             $error_message = "Error: This email is already registered. Please use another email.";
         } else {
-            // Hash the password for security
+           
             $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-            // Prepare SQL query to insert user
             $sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("sss", $name, $email, $hashed_password);
@@ -80,10 +71,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
         <script>
-            // Show the pop-up
             document.getElementById('popup').style.display = 'flex';
 
-            // Close the pop-up
             function closePopup() {
                 document.getElementById('popup').style.display = 'none';
             }

@@ -1,13 +1,7 @@
 // Navigation Toggle Function
-function toggleNav() {
-    const sideNav = document.getElementById("sideNav");
-
-    // Toggle the side navigation
-    if (sideNav.style.right === "0px" || sideNav.style.right === "") {
-        sideNav.style.right = "-250px";
-    } else {
-        sideNav.style.right = "0px";
-    }
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
 }
 
 let currentSlide = 0;

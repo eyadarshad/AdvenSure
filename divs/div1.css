@@ -1,0 +1,313 @@
+/* Updated General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: whitesmoke !important; /* Light background for contrast */
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.navbar-logo img {
+    height: 70px;
+    margin-left: 70px;
+
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 8px;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#666;
+    text-transform: uppercase;
+}
+
+/* Mobile Styling */
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
+  
+  /* Updated Hotel Card Styling */
+  .hotel-card {
+    height: auto;
+    display:inline-block;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    margin: 20px 60px 20px 50px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hotel-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .hotel-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+.hotel-card h2 {
+  font-size: 1.4rem;
+  margin: 10px 10px 5px;
+  color: #0d3b66; /* Dark navy blue for text */
+}
+
+.hotel-card .location {
+  color: #777;
+  margin: 0 10px 10px;
+}
+
+.hotel-card .price {
+  font-weight: bold;
+  color: #27ae60; /* Green for price */
+  margin: 0 10px 10px;
+}
+
+.book-now {
+  background: #05080b;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  display: block;
+  text-align: center;
+}
+
+.book-now:hover {
+  color:#000000;
+  background: whitesmoke; 
+}
+
+/* Arrange Hotel Cards */
+.hotel-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #e8f6ff; /* Light blue for a soft look */
+}
+
+/* Footer Updates */
+#footer {
+  background-color: #0d3b66; /* Dark navy blue */
+  color: white;
+  padding: 60px 20px;
+}
+
+.footer-links ul li a:hover {
+  color: #e8f6ff; /* Matching light blue */
+}
+
+  /* Footer Styles */
+#footer {
+  background-color: #2c3e50; /* Dark background for footer */
+  color: white; /* White text for contrast */
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+/* Footer Sections */
+.footer-about, .footer-links, .footer-contact, .footer-newsletter {
+  flex: 1 1 25%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Footer Headings */
+.footer-about h3, .footer-links h3, .footer-contact h3, .footer-newsletter h3 {
+  font-size: 1.6em;
+  color: #ff5722; /* Accent color */
+  margin-bottom: 15px;
+}
+
+/* Footer Links */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.footer-links ul li a:hover {
+  color: #ff5722;
+}
+
+/* Footer Contact Info */
+.footer-contact p {
+  font-size: 1em;
+  color: #bbb;
+  margin: 5px 0;
+}
+
+.footer-contact a {
+  color: #ff5722;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Newsletter Section */
+.footer-newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer-newsletter button {
+  padding: 10px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+  background-color: #e64a19;
+}
+
+/* Social Media Section */
+.footer-social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-social h3 {
+  font-size: 1.6em;
+  color: #ff5722;
+  margin-bottom: 10px;
+}
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-social ul li a {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.footer-social ul li a:hover {
+  color: #ff5722;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  font-size: 1em;
+  margin: 10px 0;
+  color: #bbb;
+}
+  
