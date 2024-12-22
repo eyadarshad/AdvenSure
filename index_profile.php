@@ -46,7 +46,7 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
 
         <div class="profile">
             <span class="profile-name"><?php echo htmlspecialchars($_SESSION['name']); ?></span>
-            <img class="profile-pic" src="<?php echo $random_pic; ?>" alt="Profile Picture" onclick="toggleDropdown()">
+           <img class="profile-pic" src="<?php echo $random_pic; ?>" alt="Profile Picture" onclick="toggleDropdown()">
             <div id="profile-dropdown" class="dropdown hidden">
                 <button class="dropdown-btn">Profile</button>
                 <button class="dropdown-btn">Settings</button>

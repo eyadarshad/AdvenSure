@@ -97,9 +97,9 @@ function openAuthModal() {
 }
 
 // Attach the openAuthModal function to all "Book Now" buttons
-document.querySelectorAll('.book-now').forEach(button => {
+document.querySelectorAll('.book-now').forEach(button) 
     button.addEventListener('click', openAuthModal);
-});
+
 
 
 

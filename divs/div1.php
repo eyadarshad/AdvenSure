@@ -20,6 +20,7 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hotel Listing</title>
+  <link rel="icon" href="logo.png" type="image/png">
   <link rel="stylesheet" href="div1.css">
 </head>
 <body>
@@ -35,9 +36,15 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
         <a href="\reg/index_profile.php#footer">Contact</a>
     </div>
     <div class="profile">
-        <span class="profile-name"><?php echo htmlspecialchars($_SESSION['name']); ?></span>
-        <img class="profile-pic" src="<?php echo $random_pic; ?>" alt="Profile Picture">
-    </div>
+            <span class="profile-name"><?php echo htmlspecialchars($_SESSION['name']); ?></span>
+           <a><img class="profile-pic" src="<?php echo $random_pic; ?>" alt="Profile Picture" onclick="toggleDropdown()"></a>
+            <div id="profile-dropdown" class="dropdown hidden">
+                <button class="dropdown-btn">Profile</button>
+                <button class="dropdown-btn">Settings</button>
+                <button class="dropdown-btn">Help</button>
+                <button class="dropdown-btn logout" onclick="logout()">Logout</button>
+            </div>
+        </div>
     <div class="mobile-menu" onclick="toggleMenu()">☰</div>
 </nav>
 

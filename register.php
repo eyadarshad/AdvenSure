@@ -59,9 +59,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
+    <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="registration.css">
 </head>
 <body>
+<nav class="navbar">
+        <div class="navbar-logo">
+        <a href="index.php"><img style="margin-left:70px; height:70px;" src="logo.png" alt="Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.php#home">Home</a>
+            <a href="index.php#features">Features</a>
+            <a href="index.php#service">Services</a>
+            <a href="index.php#testimonials">Testimonials</a>
+            <a href="index.php#footer">About Us</a>
+        </div>
+        <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+        <script>
+            function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+</script>
+    </nav>
     <?php if (!empty($error_message)) : ?>
         <div class="popup-overlay" id="popup">
             <div class="popup-box">
@@ -70,13 +90,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button onclick="closePopup()">OK</button>
             </div>
         </div>
-        <script>
-            document.getElementById('popup').style.display = 'flex';
-
-            function closePopup() {
-                document.getElementById('popup').style.display = 'none';
-            }
-        </script>
     <?php endif; ?>
     <div class="container">
         <div class="left">

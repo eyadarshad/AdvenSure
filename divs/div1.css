@@ -27,13 +27,13 @@ body {
 /* Nav Links */
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 0px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #000;
-    padding: 8px 12px;
+    padding: 25px 26px;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
@@ -54,6 +54,7 @@ body {
     border-radius: 50%;
     margin-right: 20px;
     margin-left: 8px;
+    cursor: pointer;
 }
 
 .profile-name {
@@ -62,6 +63,54 @@ body {
     color:#666;
     text-transform: uppercase;
 }
+.dropdown {
+  position: absolute;
+  margin-top: 20px;
+  margin-right: 60px;
+  top: 50px;
+  right: 0;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.dropdown.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* .hidden {
+  display: none;
+} */
+
+.dropdown-btn {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.dropdown-btn:hover {
+  background-color: #f1f1f1;
+}
+
+.logout {
+  color: red;
+  
+}
+
 
 /* Mobile Styling */
 .mobile-menu {
@@ -79,6 +128,7 @@ body {
         width: 200px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
+        border-radius: 10px;
     }
 
     .nav-links.active {

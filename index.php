@@ -330,11 +330,11 @@
 <div id="auth-modal" class="auth-modal">
     <div class="modal-content">
     <button class="close-btn" id="close-modal"> x </button>
-        <h2>Access Restricted</h2>
-        <p>Please log in to access this page.</p>
+        <center><h2>Access Restricted</h2></center>
+        <center><p>Please log in to access this page.</p></center>
         <div class="modal-buttons">
-            <a href="login.php" class="btn login-btn">Log In</a>
-            <a href="register.php" class="btn register-btn">Register</a>
+        <center> <a href="login.php" class="login-modal">Log In</a></center>
+        <center> <a href="register.php" class="register-modal">Register</a></center>
         </div>
     </div>
 </div>

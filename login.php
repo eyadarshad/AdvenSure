@@ -50,10 +50,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Sign In</title>
+    <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+<nav class="navbar">
+        <div class="navbar-logo">
+        <a href="index.php"><img style="margin-left:70px; height:70px;" src="logo.png" alt="Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.php#home">Home</a>
+            <a href="index.php#features">Features</a>
+            <a href="index.php#service">Services</a>
+            <a href="index.php#testimonials">Testimonials</a>
+            <a href="index.php#footer">About Us</a>
+        </div>
+        <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+        <script>
+            function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+// Toggle Side Navigation
+
+        let currentSlide = 0;
+const slides = document.querySelectorAll('.service-slide');
+const totalSlides = slides.length;
+        </script>
+    </nav>
     <div class="container">
         <div class="left">
             <h1>Welcome Back!</h1>
