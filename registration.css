@@ -14,7 +14,7 @@ body {
 }
 
 /* Logo Styling */
-.navbar-logo img {
+.logo {
     height: 70px;
     margin-left: 70px;
 }
@@ -87,6 +87,10 @@ a{
         z-index: 1000;
         border-radius: 10px;
     }
+    .logo{
+        margin-left:0;
+        height:70px;
+    }
 
     .nav-links.active {
         display: flex;
@@ -148,7 +152,6 @@ body {
     background-size: cover;
 }
 .container {
-    margin-left: 58px;
     display: flex;
     width: 90%;
     height: 100vh;
@@ -291,4 +294,14 @@ form input:focus {
 }
 .link:hover{
     color:#38a3a5;
+}
+@media (max-width:768px){
+    .container {
+        display: flex;
+        width: 90%;
+        height: 120vh;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(8px); 
+    }
 }

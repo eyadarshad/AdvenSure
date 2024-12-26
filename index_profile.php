@@ -4,8 +4,6 @@ if (!isset($_SESSION['name'])) {
     header("Location: login.php");
     exit;
 }
-
-// Placeholder images
 $profile_pics = [
     "https://wallpapers.com/images/hd/pixel-squid-game-pfp-0bfjhkf7oijsdekb.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDzGUS5_WXlHIvy4uDhrrYPcMpzAMgUihJm21TO9dNgVBpSE4GwrLssbpxKlf-ZgkkRDw&usqp=CAU",
@@ -32,9 +30,9 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
     <script src="index_script.js"></script>
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" style="position:fixed; width:100%;">
         <div class="navbar-logo">
-            <a href="index_profile.php"><img src="logo.png" alt="Logo"></a>
+            <a href="index_profile.php"><img src="logo.png" class="logo" alt="Logo"></a>
         </div>
         <div class="nav-links">
             <a href="#home">Home</a>
@@ -69,7 +67,7 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
             </div>
         </div>
             </div>
-
+<!-- Features -->
 <section id="features">
     <div class="title-text">
         <p>FEATURES</p>
@@ -77,7 +75,6 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
     </div>
 
     <div class="features-layer">
-        <!-- Feature 1 -->
         <div class="feature-item">
             <div class="feature-img">
                 <img src="index/winter-night-in-gulmarg.jpg" alt="Beautiful Locations">
@@ -87,8 +84,6 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
                 <p>Explore breathtaking landscapes, from serene valleys to majestic mountain peaks, where nature reveals its most captivating beauty. Discover hidden gems and iconic destinations that offer awe-inspiring views and unforgettable moments. Immerse yourself in crystal-clear lakes, lush green meadows, and vibrant cultural hotspots, perfect for every travel enthusiast. Our carefully curated tours take you to picturesque locations that promise peace, adventure, and lasting memories. Witness the magic of nature’s palette with stunning sunrises, colorful flora, and tranquil waterscapes at every destination.</p>
             </div>
         </div>
-
-        <!-- Feature 2 -->
         <div class="feature-item">
             <div class="feature-img">
                 <img src="index/images.jpg" alt="Comfortable Places">
@@ -98,8 +93,6 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
                 <p>Relax in the most comfortable accommodations that blend luxury with local charm.Experience the ultimate comfort at our handpicked accommodations, designed to make your stay relaxing and memorable. From cozy cottages in serene landscapes to luxurious resorts with world-class amenities, we offer a wide range of options to suit every traveler. Enjoy warm hospitality, modern facilities, and breathtaking views that make your lodging a part of the adventure. Each place is thoughtfully selected to provide convenience, tranquility, and a homely atmosphere. Whether you're seeking a romantic getaway or a family retreat, our accommodations promise to be your perfect haven.</p>
             </div>
         </div>
-
-        <!-- Feature 3 -->
         <div class="feature-item">
             <div class="feature-img">
                 <img src="index/tour-10-550x590.jpg" alt="Friendly Environment">
@@ -111,16 +104,14 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
         </div>
     </div>
 </section>
-
+<!-- Services -->
 <section id="service" class="tour-section">
             <div class="title-text">
                 <p>DESTINATIONS</p>
                 <h1>Our Tour Destinations</h1>
-            </div>
-            
+            </div>  
             <div class="tour-container">
                 <div class="tour-grid">
-                    <!-- Hunza Valley -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="index/L_Naran Kaghan,saif ul malok,babu sar.jpg" alt="Hunza Valley">
@@ -137,8 +128,6 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
                             <a href="divs/div1.php"><button class="book-now">Book Now</button></a>
                         </div>
                     </div>
-        
-                    <!-- Skardu -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="index/Springtime-view-of-mountain-peaks-in-the-Hunza-Valley-Pakistan.webp" alt="Skardu">
@@ -152,11 +141,9 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
                                 <span>👥 Max 10</span>
                                 <span>⭐ 4.8/5</span>
                             </div>
-                            <a href="divs/div2.php"><button class="book-now">Book Now</button></a>
+                            <a href="divs/div1.php"><button class="book-now">Book Now</button></a>
                         </div>
                     </div>
-        
-                    <!-- Naran Kaghan -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="index/minimarg.jpg" alt="Naran Kaghan">
@@ -170,11 +157,9 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
                                 <span>👥 Max 15</span>
                                 <span>⭐ 4.7/5</span>
                             </div>
-                            <a href="divs/div3.php"><button class="book-now">Book Now</button></a>
+                            <a href="divs/div1.php"><button class="book-now">Book Now</button></a>
                         </div>
                     </div>
-        
-                    <!-- Swat Valley -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="index/b2.png" alt="Swat Valley">
@@ -188,11 +173,9 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
                                 <span>👥 Max 15</span>
                                 <span>⭐ 4.6/5</span>
                             </div>
-                            <a href="divs/div4.php"><button class="book-now">Book Now</button></a>
+                            <a href="divs/div1.php"><button class="book-now">Book Now</button></a>
                         </div>
                     </div>
-        
-                    <!-- Chitral & Kalash -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="index/Ganga Choti.webp" alt="Chitral">
@@ -206,11 +189,9 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
                                 <span>👥 Max 10</span>
                                 <span>⭐ 4.8/5</span>
                             </div>
-                            <a href="divs/div4.php"><button class="book-now">Book Now</button></a>
+                            <a href="divs/div1.php"><button class="book-now">Book Now</button></a>
                         </div>
                     </div>
-        
-                    <!-- Fairy Meadows -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="index/Tourist-Activities-by-Season-in-Naran-Kaghan.webp" alt="Fairy Meadows">
@@ -224,21 +205,20 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
                                 <span>👥 Max 8</span>
                                 <span>⭐ 4.9/5</span>
                             </div>
-                            <a href="divs/div4.php"><button class="book-now">Book Now</button></a>
+                            <a href="divs/div1.php"><button class="book-now">Book Now</button></a>
                         </div>
                     </div>
                 </div>
             </div>
-
+</section>
+<!-- TESTIMONIALS -->
             <section id="testimonials" class="testimonials">
         <div class="title-text">
             <p>TESTIMONIALS</p>
             <h1>What Clients Say</h1>
-        </div>
-        
+        </div> 
         <section id="testimonial-slideshow">
             <div class="slideshow-container">
-                <!-- Slide 1 -->
                 <div class="slide active">
                     <div class="slide-content">
                         <div class="client-img">
@@ -254,8 +234,6 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
                         </div>
                     </div>
                 </div>
-
-                <!-- Slide 2 -->
                 <div class="slide">
                     <div class="slide-content">
                         <div class="client-img">
@@ -271,8 +249,6 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
                         </div>
                     </div>
                 </div>
-
-                <!-- Slide 3 -->
                 <div class="slide">
                     <div class="slide-content">
                         <div class="client-img">
@@ -289,8 +265,6 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
                     </div>
                 </div>
             </div>
-
-            <!-- Navigation -->
             <div class="slider-navigation">
                 <button class="prev" onclick="moveSlide(-1)">❮</button>
                 <div class="dots"></div>
@@ -298,32 +272,19 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
             </div>
         </section>
     </section>
-
-    <!-- <script src="testimonials.js"></script> -->
-
-
-    
-    
+   <!-- footer -->
 <section class="footer" id="footer">
     <div class="footer-container">
-        <!-- About Us Section -->
         <div class="footer-about">
             <h3>About Us</h3>
             <p>Explore the world's most breathtaking destinations with us. We provide custom tour packages for travelers looking for adventure, culture, and unforgettable experiences.</p>
         </div>
-
-        <!-- Quick Links Section -->
-       
-
-        <!-- Contact Section -->
         <div class="footer-contact">
             <h3>Contact Us</h3>
             <p>Address: Islamabad, Sector I-9, Street 14</p>
             <p>Email: <a href="mailto:info@touragency.com">info@touragency.com</a></p>
             <p>Phone: <a href="tel:+923190875344">03190875344</a></p>
         </div>
-
-        <!-- Newsletter Subscription Section -->
         <div class="footer-newsletter">
             <h3>Subscribe to Our Newsletter</h3>
             <form action="#" method="POST">
@@ -332,8 +293,6 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
             </form>
         </div>
     </div>
-
-    <!-- Social Media Section -->
     <div class="footer-social">
         <h3>Follow Us</h3>
         <ul>
@@ -343,8 +302,6 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
             <i class="fa-brands fa-youtube"></i> YouTube</a></li>
         </ul>
     </div>
-
-    <!-- Footer Bottom Section -->
     <div class="footer-bottom">
         <p>&copy; 2024 Tour Agency. All Rights Reserved.</p>
     </div>

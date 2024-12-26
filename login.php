@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <nav class="navbar">
         <div class="navbar-logo">
-        <a href="index.php"><img style="margin-left:70px; height:70px;" src="logo.png" alt="Logo"></a>
+        <a href="index.php"><img class="logo" src="logo.png" alt="Logo"></a>
         </div>
         <div class="nav-links">
             <a href="index.php#home">Home</a>
@@ -79,7 +79,7 @@ const slides = document.querySelectorAll('.service-slide');
 const totalSlides = slides.length;
         </script>
     </nav>
-    <div class="container">
+   <center> <div class="container">
         <div class="left">
             <h1>Welcome Back!</h1>
             <p>Don't have an account? Register now to start your journey with us.</p>
@@ -94,5 +94,6 @@ const totalSlides = slides.length;
             </form>
         </div>
     </div>
+</center>
 </body>
 </html>

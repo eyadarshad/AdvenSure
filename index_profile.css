@@ -22,13 +22,13 @@ body {
     background-color: #fff;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 /* Logo Styling */
-.navbar-logo img {
+.logo {
     height: 70px;
     margin-left: 70px;
-
 }
 
 /* Nav Links */
@@ -135,6 +135,10 @@ body {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         border-radius: 10px;
+    }
+    .logo {
+        height: 70px;
+        margin-left: 0px;
     }
 
     .nav-links.active {
@@ -288,7 +292,7 @@ body, html {
 
 .banner-text p {
     color:#FFD700 ;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bolder;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
@@ -336,7 +340,20 @@ body, html {
     color: #ffffff;
     border-radius: 20px;
 }
-
+@media (max-width:768px) {
+    .banner-text h1 {
+        font-size: 90px;
+        font-family: monospace;
+        
+    }
+    .banner-text p {
+        color:#FFD700;
+        font-size: 30px;
+        font-weight: bolder;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: normal;
+    }  
+}
 
 /* General Styling */
 * {

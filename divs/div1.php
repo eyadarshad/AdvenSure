@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['name'])) {
-    header("Location: login.php");
+    header("Location: \\reg/login.php");
     exit;
 }
 
@@ -26,7 +26,7 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
 <body>
   <nav class="navbar">
     <div class="navbar-logo">
-        <a href="\reg/index_profile.php"><img src="logo.png" alt="Logo"></a>
+        <a href="\reg/index_profile.php"><img src="logo.png" class="logo" alt="Logo"></a>
     </div>
     <div class="nav-links">
         <a href="\reg/index_profile.php#home">Home</a>
@@ -48,30 +48,41 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
     <div class="mobile-menu" onclick="toggleMenu()">☰</div>
 </nav>
 
-  <main class="hotel-list">
-    <!-- Hotel Card 1 -->
+<center><main class="hotel-list">
     <div class="hotel-card">
       <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/594788322.jpg?k=52026e60d70ed2aefbbd2b1e8708d4d1b2a3a37b2647d9c5294a404a0ac76286&o=&hp=1" alt="Hotel 1">
       <h2>Luxury Inn</h2>
-      <p class="location">Paris, France</p>
+      <p class="location">Murree, Pakistan</p>
       <p class="price">$200/night</p>
       <button class="book-now">Book Now</button>
     </div>
-    <!-- Hotel Card 2 -->
     <div class="hotel-card">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlaliFN5VCesMHp06yIp_K7tNQvggP43HKfg&s" alt="Hotel 2">
       <h2>Beachside Resort</h2>
-      <p class="location">Maldives</p>
+      <p class="location">Skardu, Pakistan</p>
       <p class="price">$350/night</p>
       <button class="book-now">Book Now</button>
     </div>
-    <!-- Hotel Card 3 -->
     <div class="hotel-card">
       <img src="https://content.r9cdn.net/rimg/kimg/c6/e2/c227ca6b0c75b6a9.jpg?width=500&height=350&xhint=270&yhint=166&crop=true" alt="Hotel 3">
       <h2>Mountain Retreat</h2>
-      <p class="location">Aspen, USA</p>
+      <p class="location">Kashmir, Pakistan</p>
       <p class="price">$180/night</p>
       <button class="book-now">Book Now</button>
+    </div>
+    <div class="hotel-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOK6P0q0h3dlwbv-X5InWA2FEUeW67oaUguWWhSMlFb3ekEJNc7W4LEL68NqbMsVMHLgM&usqp=CAU" alt="Hotel 3">
+        <h2>Mountain Retreat</h2>
+        <p class="location">Hunza, Pakistan</p>
+        <p class="price">$180/night</p>
+        <button class="book-now">Book Now</button>
+      </div>
+    <div class="hotel-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFiC79gSS2_oqgwdcanT3nUfxq6jKkidV2PA&s" alt="Hotel 3">
+        <h2>Mountain Retreat</h2>
+        <p class="location">Naran, Pakistan</p>
+        <p class="price">$180/night</p>
+        <button class="book-now">Book Now</button>
     </div>
     <div class="hotel-card">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOK6P0q0h3dlwbv-X5InWA2FEUeW67oaUguWWhSMlFb3ekEJNc7W4LEL68NqbMsVMHLgM&usqp=CAU" alt="Hotel 3">
@@ -80,34 +91,54 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
         <p class="price">$180/night</p>
         <button class="book-now">Book Now</button>
       </div>
-    <div class="hotel-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFiC79gSS2_oqgwdcanT3nUfxq6jKkidV2PA&s" alt="Hotel 3">
+      <div class="hotel-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOK6P0q0h3dlwbv-X5InWA2FEUeW67oaUguWWhSMlFb3ekEJNc7W4LEL68NqbMsVMHLgM&usqp=CAU" alt="Hotel 3">
         <h2>Mountain Retreat</h2>
-        <p class="location">Aspen, USA</p>
+        <p class="location">Kaghan, Pakistan</p>
         <p class="price">$180/night</p>
         <button class="book-now">Book Now</button>
-    </div>
-  </main>
+      </div>
+      <div class="hotel-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOK6P0q0h3dlwbv-X5InWA2FEUeW67oaUguWWhSMlFb3ekEJNc7W4LEL68NqbMsVMHLgM&usqp=CAU" alt="Hotel 3">
+        <h2>Mountain Retreat</h2>
+        <p class="location">Swat, Pakistan</p>
+        <p class="price">$180/night</p>
+        <button class="book-now">Book Now</button>
+      </div>
+      <div class="hotel-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOK6P0q0h3dlwbv-X5InWA2FEUeW67oaUguWWhSMlFb3ekEJNc7W4LEL68NqbMsVMHLgM&usqp=CAU" alt="Hotel 3">
+        <h2>Mountain Retreat</h2>
+        <p class="location">Chitral, Pakistan</p>
+        <p class="price">$180/night</p>
+        <button class="book-now">Book Now</button>
+      </div>
+      <div class="hotel-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOK6P0q0h3dlwbv-X5InWA2FEUeW67oaUguWWhSMlFb3ekEJNc7W4LEL68NqbMsVMHLgM&usqp=CAU" alt="Hotel 3">
+        <h2>Mountain Retreat</h2>
+        <p class="location">Kalash, Pakistan</p>
+        <p class="price">$180/night</p>
+        <button class="book-now">Book Now</button>
+      </div>
+      <div class="hotel-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOK6P0q0h3dlwbv-X5InWA2FEUeW67oaUguWWhSMlFb3ekEJNc7W4LEL68NqbMsVMHLgM&usqp=CAU" alt="Hotel 3">
+        <h2>Mountain Retreat</h2>
+        <p class="location">Fairy Meadows, Pakistan</p>
+        <p class="price">$180/night</p>
+        <button class="book-now">Book Now</button>
+      </div>
+  </main><center>
   <section id="footer">
     <div class="footer-container">
-        <!-- About Us Section -->
         <div class="footer-about">
             <h3>About Us</h3>
             <p>Explore the world's most breathtaking destinations with us. We provide custom tour packages for travelers looking for adventure, culture, and unforgettable experiences.</p>
         </div>
-
-        <!-- Quick Links Section -->
-       
-
-        <!-- Contact Section -->
         <div class="footer-contact">
             <h3>Contact Us</h3>
             <p>Address: Islamabad, Sector I-9, Street 14</p>
             <p>Email: <a href="mailto:info@touragency.com">info@touragency.com</a></p>
             <p>Phone: <a href="tel:+923190875344">03190875344</a></p>
         </div>
-
-        <!-- Newsletter Subscription Section -->
         <div class="footer-newsletter">
             <h3>Subscribe to Our Newsletter</h3>
             <form action="#" method="POST">
@@ -116,8 +147,6 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
             </form>
         </div>
     </div>
-
-    <!-- Social Media Section -->
     <div class="footer-social">
         <h3>Follow Us</h3>
         <ul>
@@ -127,8 +156,6 @@ $random_pic = $profile_pics[array_rand($profile_pics)];
             <i class="fa-brands fa-youtube"></i> YouTube</a></li>
         </ul>
     </div>
-
-    <!-- Footer Bottom Section -->
     <div class="footer-bottom">
         <p>&copy; 2024 Tour Agency. All Rights Reserved.</p>
     </div>

@@ -18,7 +18,7 @@ body {
 }
 
 /* Logo Styling */
-.navbar-logo img {
+.logo {
     height: 70px;
     margin-left: 70px;
 
@@ -130,6 +130,11 @@ body {
         z-index: 1000;
         border-radius: 10px;
     }
+    .logo {
+      height: 70px;
+      margin-left: 0px;
+  
+  }
 
     .nav-links.active {
         display: flex;
@@ -141,8 +146,6 @@ body {
         font-size: 24px;
     }
 }
-  
-  /* Updated Hotel Card Styling */
   .hotel-card {
     height: auto;
     display:inline-block;
@@ -199,8 +202,6 @@ body {
   color:#000000;
   background: whitesmoke; 
 }
-
-/* Arrange Hotel Cards */
 .hotel-container {
   display: flex;
   flex-wrap: wrap;
@@ -209,7 +210,19 @@ body {
   padding: 20px;
   background-color: #e8f6ff; /* Light blue for a soft look */
 }
-
+@media (max-width:768px){
+  .hotel-card {
+    height: auto;
+    display:inline-block;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 70%;
+    margin: 20px 60px 20px 50px;
+    transition: transform 0.3s ease-in-out;
+  }
+}
 /* Footer Updates */
 #footer {
   background-color: #0d3b66; /* Dark navy blue */

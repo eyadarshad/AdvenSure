@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <nav class="navbar">
         <div class="navbar-logo">
-        <a href="index.php"><img style="margin-left:70px; height:70px;" src="logo.png" alt="Logo"></a>
+        <a href="index.php"><img class="logo" src="logo.png" alt="Logo"></a>
         </div>
         <div class="nav-links">
             <a href="index.php#home">Home</a>
@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     <?php endif; ?>
-    <div class="container">
+    <center><div class="container">
         <div class="left">
             <h1>Welcome Back!</h1>
             <p>To keep connected with us please login with your personal info</p>
@@ -113,5 +113,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
         </div>
     </div>
+    </center>
 </body>
 </html>

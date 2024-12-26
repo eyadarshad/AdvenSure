@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-logo">
-        <a href="index.php"><img style="margin-left:70px; height:70px;" src="logo.png" alt="Logo"></a>
+        <a href="index.php"><img class="logo" src="logo.png" alt="Logo"></a>
         </div>
         <div class="nav-links">
             <a href="#home">Home</a>
@@ -208,6 +208,7 @@
                     </div>
                 </div>
             </div>
+</section> 
             <section id="testimonials" class="testimonials">
         <div class="title-text">
             <p>TESTIMONIALS</p>
@@ -363,5 +364,6 @@
         // Attach the closeAuthModal function to the close button
         document.getElementById('close-modal').addEventListener('click', closeAuthModal);
 </script>
+    
 </body>
 </html>
