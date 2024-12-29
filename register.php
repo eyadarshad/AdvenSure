@@ -83,14 +83,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </script>
     </nav>
     <?php if (!empty($error_message)) : ?>
-        <div class="popup-overlay" id="popup">
-            <div class="popup-box">
-                <h2>Notification</h2>
-                <p><?= htmlspecialchars($error_message) ?></p>
-                <button onclick="closePopup()">OK</button>
-            </div>
+    <div class="popup-overlay" id="popup">
+        <div class="popup-box">
+            <h2>Notification</h2>
+            <p><?= htmlspecialchars($error_message) ?></p>
+            <button onclick="closePopup()">OK</button>
         </div>
-    <?php endif; ?>
+    </div>
+<?php endif; ?>
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const popupOverlay = document.getElementById('popup');
+    const popupMessage = document.querySelector('#popup .popup-box p');
+    
+    if (popupOverlay && popupMessage && popupMessage.textContent.trim() !== '') {
+        popupOverlay.style.display = 'flex'; // Display the popup
+    }
+});
+
+function closePopup() {
+    const popupOverlay = document.getElementById('popup');
+    if (popupOverlay) {
+        popupOverlay.style.display = 'none';
+    }
+}
+
+</script>
     <center><div class="container">
         <div class="left">
             <h1>Welcome Back!</h1>
